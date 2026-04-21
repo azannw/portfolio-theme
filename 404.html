@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
+  <link rel="apple-touch-icon" href="/public/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- REPLACE: Update title -->
+  <title>404 | Your Name</title>
+  <meta name="description" content="Page not found." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <style>
+    .not-found {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .not-found-code {
+      font-size: clamp(4rem, 15vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -4px;
+      line-height: 1;
+      margin: 0 0 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .not-found-code span {
+      color: var(--accent-color);
+    }
+
+    .not-found-msg {
+      font-family: var(--font-sans);
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .not-found-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+      color: var(--accent-color);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-home:hover {
+      background: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+      cursor: pointer;
+      background: none;
+    }
+
+    .btn-back:hover {
+      border-color: var(--border-active);
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 480px) {
+      .not-found-code {
+        letter-spacing: -2px;
+      }
+
+      .not-found-actions {
+        flex-direction: column;
+      }
+
+      .btn-home,
+      .btn-back {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- REPLACE: Change "xx" to your initials -->
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <a href="/" class="logo">xx<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="/about" class="nav-link">about</a>
+        <a href="/projects" class="nav-link">projects</a>
+        <a href="/community" class="nav-link">community</a>
+        <a href="/blog" class="nav-link">blog</a>
+        <a href="/contact" class="nav-link">contact</a>
+      </div>
+
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+
+      <button class="menu-toggle text-primary" id="menu-toggle" onclick="toggleMobileMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="/about" class="mobile-nav-link">about</a>
+      <a href="/projects" class="mobile-nav-link">projects</a>
+      <a href="/community" class="mobile-nav-link">community</a>
+      <a href="/blog" class="mobile-nav-link">blog</a>
+      <a href="/contact" class="mobile-nav-link">contact</a>
+    </div>
+  </nav>
+
+  <main class="not-found container">
+    <div class="not-found-code">4<span>0</span>4</div>
+    <p class="not-found-msg">this page doesn't exist.</p>
+
+    <div class="not-found-actions">
+      <a href="/" class="btn-home">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        go home
+      </a>
+      <button class="btn-back" onclick="history.back()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        go back
+      </button>
+    </div>
+  </main>
+
+  <!-- REPLACE: Update copyright name -->
+  <footer>
+    <div class="container">
+      <div>&copy; Your Name</div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobile-nav');
+      const btn = document.getElementById('menu-toggle');
+      if (nav) nav.classList.toggle('open');
+      if (btn) btn.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

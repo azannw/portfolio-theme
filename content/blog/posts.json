@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Your First Blog Post Title",
+    "date": "2025-01-01",
+    "slug": "first-post",
+    "excerpt": "A short excerpt or summary of your first blog post. This shows up on the blog listing page."
+  },
+  {
+    "id": "2",
+    "title": "Your Second Blog Post Title",
+    "date": "2025-02-01",
+    "slug": "second-post",
+    "excerpt": "A short excerpt or summary of your second blog post. This shows up on the blog listing page."
+  }
+]
