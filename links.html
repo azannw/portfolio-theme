@@ -7,9 +7,8 @@
   <link rel="apple-touch-icon" href="/public/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- REPLACE: Update title and description -->
-  <title>Projects | Your Name</title>
-  <meta name="description" content="Projects built by Your Name." />
+  <title>Links | Your Name</title>
+  <meta name="description" content="Shortlinks and quick references." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,18 +24,16 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <!-- REPLACE: Change "xx" to your initials -->
   <nav class="navbar">
     <div class="container navbar-content">
       <a href="/" class="logo">xx<span>.</span></a>
 
       <div class="nav-links">
         <a href="/about" class="nav-link">about</a>
-        <a href="/projects" class="nav-link active">projects</a>
+        <a href="/projects" class="nav-link">projects</a>
         <a href="/community" class="nav-link">community</a>
         <a href="/blog" class="nav-link">blog</a>
-        <a href="/links" class="nav-link">links</a>
+        <a href="/links" class="nav-link active">links</a>
         <a href="/contact" class="nav-link">contact</a>
       </div>
 
@@ -75,33 +72,24 @@
   </nav>
 
   <main class="page-content container">
-    <div class="bash-cmd">$ ls ~/projects/</div>
-    <!-- REPLACE: Update subtitle -->
-    <p class="page-subtitle">stuff i built.</p>
+    <div class="bash-cmd">$ cat ~/links.txt</div>
+    <p class="page-subtitle">shortlinks i made. click any to go directly.</p>
 
-    <!-- REPLACE: Add your own projects below -->
-    <div class="projects-list">
-      <a href="https://github.com/yourgithub/project-one" target="_blank" class="project-item">
-        <h3 class="project-name">Project One</h3>
-        <p class="project-desc">A short description of what this project does and why it exists.</p>
+    <!-- Add your shortlinks here. Format: /slug and [short description] -->
+    <!-- Each entry in vercel.json redirects array needs a matching row here -->
+    <div class="links-list">
+      <a href="/your-slug" class="links-row">
+        <span class="links-slug">/your-slug</span>
+        <span class="links-desc">[two three words]</span>
       </a>
 
-      <a href="https://github.com/yourgithub/project-two" target="_blank" class="project-item">
-        <h3 class="project-name">Project Two</h3>
-        <p class="project-desc">A short description of what this project does and why it exists.</p>
-      </a>
-
-      <a href="https://github.com/yourgithub/project-three" target="_blank" class="project-item">
-        <h3 class="project-name">Project Three</h3>
-        <p class="project-desc">A short description of what this project does and why it exists.</p>
+      <a href="/another-slug" class="links-row">
+        <span class="links-slug">/another-slug</span>
+        <span class="links-desc">[brief description]</span>
       </a>
     </div>
-
-    <!-- REPLACE: Update GitHub link -->
-    <a href="https://github.com/yourgithub" target="_blank" class="more-projects-link">more on github &rarr;</a>
   </main>
 
-  <!-- REPLACE: Update copyright name -->
   <footer>
     <div class="container">
       <div>&copy; Your Name</div>

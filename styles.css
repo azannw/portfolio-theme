@@ -543,6 +543,42 @@ section {
 }
 
 /* ===================================
+   Links
+   =================================== */
+.links-list {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.links-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left 0.2s ease;
+}
+
+.links-row:hover {
+  padding-left: 0.5rem;
+}
+
+.links-slug {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  min-width: 160px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.links-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ===================================
    Community
    =================================== */
 .community-list {
