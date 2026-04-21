@@ -7,8 +7,8 @@
   <link rel="apple-touch-icon" href="/public/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Links | Your Name</title>
-  <meta name="description" content="Shortlinks and quick references." />
+  <title>Extras | Your Name</title>
+  <meta name="description" content="Shortlinks, compilations, and other stuff." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
         <a href="/projects" class="nav-link">projects</a>
         <a href="/community" class="nav-link">community</a>
         <a href="/blog" class="nav-link">blog</a>
-        <a href="/links" class="nav-link active">links</a>
+        <a href="/extras" class="nav-link active">extras</a>
         <a href="/contact" class="nav-link">contact</a>
       </div>
 
@@ -66,27 +66,43 @@
       <a href="/projects" class="mobile-nav-link">projects</a>
       <a href="/community" class="mobile-nav-link">community</a>
       <a href="/blog" class="mobile-nav-link">blog</a>
-      <a href="/links" class="mobile-nav-link">links</a>
+      <a href="/extras" class="mobile-nav-link">extras</a>
       <a href="/contact" class="mobile-nav-link">contact</a>
     </div>
   </nav>
 
   <main class="page-content container">
-    <div class="bash-cmd">$ cat ~/links.txt</div>
-    <p class="page-subtitle">shortlinks i made. click any to go directly.</p>
+    <div class="bash-cmd">$ ls ~/extras/</div>
 
-    <!-- Add your shortlinks here. Format: /slug and [short description] -->
-    <!-- Each entry in vercel.json redirects array needs a matching row here -->
-    <div class="links-list">
-      <a href="/your-slug" class="links-row">
-        <span class="links-slug">/your-slug</span>
-        <span class="links-desc">[two three words]</span>
-      </a>
+    <div style="margin-top: 1.5rem;">
 
-      <a href="/another-slug" class="links-row">
-        <span class="links-slug">/another-slug</span>
-        <span class="links-desc">[brief description]</span>
-      </a>
+      <!-- Shortlinks: add one row per redirect in vercel.json -->
+      <div style="margin-bottom: 2.5rem;">
+        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ cat ~/links.txt</div>
+        <div class="links-list" style="margin-top: 0;">
+          <a href="/your-slug" class="links-row">
+            <span class="links-slug">/your-slug</span>
+            <span class="links-desc">[brief description]</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Compilations: research or archive projects you built -->
+      <div style="margin-bottom: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ ls ~/compilations/</div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="/your-compilation" target="_blank" class="text-primary mono" style="font-size: 0.9rem; text-decoration: none; opacity: 0.85;">~/your-compilation <span class="text-secondary" style="font-weight: 400;">&mdash; short description</span></a>
+        </div>
+      </div>
+
+      <!-- Pages: standalone pages you made -->
+      <div style="padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ ls ~/pages/</div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="/your-page" target="_blank" class="text-primary mono" style="font-size: 0.9rem; text-decoration: none; opacity: 0.85;">~/your-page <span class="text-secondary" style="font-weight: 400;">&mdash; short description</span></a>
+        </div>
+      </div>
+
     </div>
   </main>
 
