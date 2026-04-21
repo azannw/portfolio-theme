@@ -74,35 +74,25 @@
   <main class="page-content container">
     <div class="bash-cmd">$ ls ~/extras/</div>
 
-    <div style="margin-top: 1.5rem;">
-
-      <!-- Shortlinks: add one row per redirect in vercel.json -->
-      <div style="margin-bottom: 2.5rem;">
-        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ cat ~/links.txt</div>
-        <div class="links-list" style="margin-top: 0;">
-          <a href="/your-slug" class="links-row">
-            <span class="links-slug">/your-slug</span>
-            <span class="links-desc">[brief description]</span>
-          </a>
-        </div>
+    <div class="extras-section">
+      <p class="extras-label">links</p>
+      <div class="extras-list">
+        <a href="/your-slug" class="extras-item">/your-slug <span>&mdash; brief description</span></a>
       </div>
+    </div>
 
-      <!-- Compilations: research or archive projects you built -->
-      <div style="margin-bottom: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ ls ~/compilations/</div>
-        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-          <a href="/your-compilation" target="_blank" class="text-primary mono" style="font-size: 0.9rem; text-decoration: none; opacity: 0.85;">~/your-compilation <span class="text-secondary" style="font-weight: 400;">&mdash; short description</span></a>
-        </div>
+    <div class="extras-section">
+      <p class="extras-label">compilations</p>
+      <div class="extras-list">
+        <a href="/your-compilation" target="_blank" class="extras-item">~/your-compilation <span>&mdash; short description</span></a>
       </div>
+    </div>
 
-      <!-- Pages: standalone pages you made -->
-      <div style="padding-top: 2rem; border-top: 1px solid var(--border-color);">
-        <div class="bash-cmd" style="margin-bottom: 0.75rem;">$ ls ~/pages/</div>
-        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-          <a href="/your-page" target="_blank" class="text-primary mono" style="font-size: 0.9rem; text-decoration: none; opacity: 0.85;">~/your-page <span class="text-secondary" style="font-weight: 400;">&mdash; short description</span></a>
-        </div>
+    <div class="extras-section">
+      <p class="extras-label">pages</p>
+      <div class="extras-list">
+        <a href="/your-page" target="_blank" class="extras-item">~/your-page <span>&mdash; short description</span></a>
       </div>
-
     </div>
   </main>
 

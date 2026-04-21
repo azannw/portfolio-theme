@@ -543,39 +543,51 @@ section {
 }
 
 /* ===================================
-   Links
+   Extras
    =================================== */
-.links-list {
-  margin-top: 1.5rem;
+.extras-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border-color);
 }
 
-.links-row {
+.extras-section:first-of-type {
+  margin-top: 1.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.extras-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.extras-list {
   display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border-color);
-  text-decoration: none;
-  color: inherit;
-  transition: padding-left 0.2s ease;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
-.links-row:hover {
-  padding-left: 0.5rem;
-}
-
-.links-slug {
-  color: var(--accent-color);
+.extras-item {
+  font-family: var(--font-mono);
   font-size: 0.9rem;
-  min-width: 160px;
-  flex-shrink: 0;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
 }
 
-.links-desc {
+.extras-item span {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.extras-item:hover {
+  opacity: 1;
+  color: var(--accent-color);
 }
 
 /* ===================================
